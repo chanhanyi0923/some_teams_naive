@@ -16,15 +16,8 @@ pii p[SIZE];
 pii online[SIZE];
 bool comp (const pii& a, const pii& b)
 {
-	if (a.fi == 0)
-	{
-		return true;
-	}
-	if (b.fi == 0)
-	{
-		return false;
-	}
-	
+	if (a.fi == 0) return a.se < 0;
+	if (b.fi == 0) return b.se > 0;
 	return (1.0 * a.se / a.fi < 1.0 * b.se / b.fi);
 }
 
