@@ -77,7 +77,6 @@ public class F
                 case '-': return 1;
                 case '*':
                 case '/': return 2;
-                // case '%': return 2;
             }
             return -1;
         }
@@ -89,7 +88,6 @@ public class F
                 case '-': return a.subtract(b);
                 case '*': return a.multiply(b);
                 case '/': return a.divide(b);
-                // case '%': return a.mod(b);
             }
             return new Frac();
         }
@@ -142,18 +140,6 @@ public class F
 
     public static void trans(int x1, int x2, int y1, int y2)
     {
-        /*
-        System.out.println("!");
-        for (int i = x1; i <= x2; i ++) {
-            if (y1 >= S[i].length()) {
-                System.out.println("");
-            } else {
-                int y3 = Math.min(y2 + 1, S[i].length());
-                System.out.println(S[i].substring(y1, y3));
-            }
-        }
-        System.out.println("!");
-        */
         boolean ex = false;
         int idx_x = -1, idx_y = -1;
         for (int j = y1; j <= y2; j ++) {
@@ -207,7 +193,6 @@ public class F
             }
             exp = "";
             trans(0, N - 1, 0, big - 1);
-            // System.out.println(exp);
             Frac ans = sol.work(exp);
             System.out.printf("%s/%s\n", ans.n, ans.d);
         }
