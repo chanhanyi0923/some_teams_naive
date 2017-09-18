@@ -23,6 +23,7 @@ ZJU-ICPC-2017-team-7
 - C16 2015-Japan Alumni Group Spring Contest
 - C17 2016-XVII Open Cup-GP of Eurasia
 - C18 2017-ICPC-Asia-Urumqi-Online
-- C19
+- C19 2017-ICPC-Asia-Shenyang-Online
 - C20
 - C21 2017-ICPC-Asia-Xian-Online
+- C22 2017-ICPC-Asia-Qingdao-Online
