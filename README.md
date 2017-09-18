@@ -1,4 +1,4 @@
-# some_teams_naive
+# SomeTeamsNaive
 ZJU-ICPC-2017-team-7
 
 ## 2017 Zhejiang University ACM-ICPC team 
