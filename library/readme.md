@@ -11,15 +11,15 @@
 |莫队|X|X||
 |||String||
 |kmp|X|X||
-|AC自动机|X|X||
-|SAM用你那个数组版|X|X||
+|AC自动机||many problems||
+|SAM用你那个数组版||many problems|SAM.cpp|
 |后缀数组用白书|X|X||
 ||计算几何板子（这个得挑挑）||
 |||Math||
 |高斯消元板子|X|X||
 |ab＜1e18求里面素数的那个筛法|X|X||
 |求逆|X|X||
-|离散对数||ZOJ(internal) Summer 2017 1013 Perfect Shuffle||
+|离散对数||ZOJ(internal) Summer 2017 1013 Perfect Shuffle|BSGS.cpp|
 |拓展欧几里得|X|X||
 |fft|X|X||
 |ntt|X|X||
