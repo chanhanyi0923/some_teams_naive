@@ -11,7 +11,8 @@
 |莫队|X|X||
 |||String||
 |kmp|X|X||
-|AC自动机||many problems||
+|Z-Algorithm|X|X||
+|AC自动机||many problems|AC_Automaton.cpp|
 |SAM用你那个数组版||many problems|SAM.cpp|
 |后缀数组用白书|X|X||
 ||计算几何板子（这个得挑挑）||
