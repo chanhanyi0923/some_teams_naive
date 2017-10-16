@@ -14,7 +14,7 @@ ll BSGS(ll a, ll b, ll c)
     if (it != M + m && it->first == x) {
       return i * m - it->second;
     }
-    x = mul(x, y, c);
+    x = x * y % c;
   }
   return -1;
 }
