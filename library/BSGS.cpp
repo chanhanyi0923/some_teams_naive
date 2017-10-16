@@ -5,7 +5,7 @@ ll BSGS(ll a, ll b, ll c)
 {
   ll m = ceil(sqrt(1.0 * c)) + 1, x = b;
   for (int i = 0; i < m; i ++) {
-    M[i] = pll(x, i); x = mul(x, a, c);
+    M[i] = pll(x, i); x = x * a % c;
   }
   sort(M, M + m);
   ll y = x = qp(a, m, c);
