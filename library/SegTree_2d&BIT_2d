@@ -1,0 +1,119 @@
+//线段树
+using namespace std;
+
+struct segtree
+{
+    map<int, int> *dat[6600] {};
+
+    map<int, int> &mp(int idx)
+    {
+        if (dat[idx] == nullptr) dat[idx] = new map<int, int>;
+        return *dat[idx];
+    }
+
+    void add(int L, int R, int area, int id)
+    {
+        L += 4096;
+        R += 4096;
+
+        while (L <= R)
+        {
+            if (L&1) mp(L++).emplace(area, id);
+            if (!(R&1)) mp(R--).emplace(area, id);
+            L >>= 1; R >>= 1;
+        }
+    }
+    
+    void sub(int L, int R, int area)
+    {
+        L += 4096;
+        R += 4096;
+
+        while (L <= R)
+        {
+            if (L&1) mp(L++).erase(area);
+            if (!(R&1)) mp(R--).erase(area);
+            L >>= 1; R >>= 1;
+        }
+    }
+
+    pair<int, int> get(int pos)
+    {
+        pair<int, int> ret(1e9, 0);
+
+        for (pos += 4096; pos; pos >>= 1)
+        {
+            if (dat[pos] == nullptr || mp(pos).empty()) continue;
+            if (ret.first > mp(pos).begin()->first)
+                ret = *mp(pos).begin();
+        }
+
+        return ret;
+    }
+};
+
+struct seg2d
+{
+    segtree seg[6600];
+
+    void add(int L, int y1, int R, int y2, int area, int id)
+    {
+        L += 4096;
+        R += 4096;
+
+        while (L <= R)
+        {
+            if (L&1) seg[L++].add(y1, y2, area, id);
+            if (!(R&1)) seg[R--].add(y1, y2, area, id);
+            L >>= 1; R >>= 1;
+        }
+    }
+
+    void sub(int L, int y1, int R, int y2, int area, int id)
+    {
+        L += 4096;
+        R += 4096;
+
+        while (L <= R)
+        {
+            if (L&1) seg[L++].sub(y1, y2, area);
+            if (!(R&1)) seg[R--].sub(y1, y2, area);
+            L >>= 1; R >>= 1;
+        }
+    }
+
+    pair<int, int> get(int x1, int y1)
+    {
+        pair<int, int> ret(1e9, 0);
+
+        for (x1 += 4096; x1; x1 >>= 1)
+        {
+            ret = min(ret, seg[x1].get(y1));
+        }
+        return ret;
+    }
+} seg;
+
+
+///// 树状数组
+const int N = 2505;
+
+long long bit[N][N];
+
+void add(int p, int q, long long v) {
+  for (int i = p; i < N; i |= i + 1) {
+    for (int j = q; j < N; j |= j + 1) {
+      bit[i][j] += v;
+    }
+  }
+}
+
+long long find(int p, int q) {
+  long long ret = 0;
+  for (int i = p; i >= 0; i = (i & (i + 1)) - 1) {
+    for (int j = q; j >= 0; j = (j & (j + 1)) - 1) {
+      ret += bit[i][j];
+    }
+  }
+  return ret;
+}
