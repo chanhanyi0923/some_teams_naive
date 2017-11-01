@@ -27,3 +27,8 @@ ZJU-ICPC-2017-team-7
 - C20
 - C21 2017-ICPC-Asia-Xian-Online
 - C22 2017-ICPC-Asia-Qingdao-Online
+- 2014-ICPC-Northern Subregional
+- 2016-ICPC-Asia-Dalian
+- 2016-ICPC-Asia-Qingdao
+- 2016-ICPC-Asia-Shenyang
+- 2016-ICPC-National Taiwan U Selection
