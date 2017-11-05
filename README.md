@@ -32,3 +32,4 @@ ZJU-ICPC-2017-team-7
 - 2016-ICPC-Asia-Qingdao
 - 2016-ICPC-Asia-Shenyang
 - 2016-ICPC-National Taiwan U Selection
+- 2014-ICPC-Asia-Tokyo
